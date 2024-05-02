@@ -1,0 +1,98 @@
+<!-- Created By CodingNepal - www.codingnepalweb.com  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz SSGAME</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAweome CDN Link for Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+    <!-- start Quiz button -->
+    <img src="assets/sestgif.gif" alt="SEST SENAT Logo">
+    <div class="start_btn"><button>Iniciar Quiz</button></div>
+
+    <!-- Info Box -->
+    <div class="info_box">
+        <div class="info-title"><span>Dicas do Quiz</span></div>
+        <div class="info-list">
+            <div class="info">1. Você tem <span>15 segundos</span> por questão.</div>
+            <div class="info">2. Só pode marcar uma resposta.</div>
+            <div class="info">3. Você ganha pontos ao responder rapidamente.</div>
+            <div class="info">4. Confira nossas ações no Mural de Cursos.</div>
+        </div>
+        <div class="buttons">
+            <button class="quit">Sair</button>
+            <button class="restart">Continuar</button>
+        </div>
+    </div>
+
+    <div class="evidencia_box">
+        <div class="info-title"><span>Evidência | SENAT</span></div>
+        <div class="info-list">
+            <div class="info">O SENAT tem <span>3 evidências</span> nesse mês. Quais são?</div>
+            <div class="input"><input type="text" placeholder="Digite aqui a primeira evidência."></div>
+            <div class="input"><input type="text" placeholder="Digite aqui a segunda evidência."></div>
+            <div class="input"><input type="text" placeholder="Digite aqui a terceira evidência."></div>
+        </div>
+        <div class="buttons">
+            <button class="quit">Sair</button>
+            <button class="restart" onclick="verificarEvidencias()">Verificar</button>
+        </div>
+    </div>
+    
+
+    <!-- Quiz Box -->
+    <div class="quiz_box">
+        <header>
+            <div class="title">Quiz SEST SENAT</div>
+            <div class="timer">
+                <div class="time_left_txt">Tempo</div>
+                <div class="timer_sec">15</div>
+            </div>
+            <div class="time_line"></div>
+        </header>
+        <section>
+            <div class="que_text">
+                <!-- Here I've inserted question from JavaScript -->
+            </div>
+            <div class="option_list">
+                <!-- Here I've inserted options from JavaScript -->
+            </div>
+        </section>
+
+        <!-- footer of Quiz Box -->
+        <footer>
+            <div class="total_que">
+                <!-- Here I've inserted Question Count Number from JavaScript -->
+            </div>
+            <button class="next_btn">Próxima</button>
+        </footer>
+    </div>
+
+    <!-- Result Box -->
+    <div class="result_box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete_text">Você terminou o Quiz!</div>
+        <div class="score_text">
+            <!-- Here I've inserted Score Result from JavaScript -->
+        </div>
+        <div class="buttons">
+            <button class="restart">Refazer Quiz</button>
+            <button class="quit">Sair</button>
+            <button class="nextlevel">Próximo Game</button>
+        </div>
+    </div>
+
+    <!-- Inside this JavaScript file I've inserted Questions and Options only -->
+    <script src="js/questions.js"></script>
+
+    <!-- Inside this JavaScript file I've coded all Quiz Codes -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+/* Reset de margens, padding e box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+    .header {
+      text-align: center;
+      margin-top: 150px;
+    }
+    .image-container img {
+      display: block;
+      margin: 0 auto;
+    }
+    .play-button {
+      text-align: center;
+      margin-top: -85px;
+    }
+    .play-button a {
+  display: inline-block;
+  font-size: 25px;
+  padding: 20px 45px;
+  box-shadow: -1px 5px 1px #5e687980;
+  background-color: #007bff; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto do botão */
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  animation: pulse 3s infinite; /* Aplicando a animação de pulso */
+  }
+
+    .play-button a:hover {
+      background-color: #0056b3;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      transform: translateY(-2px);
+    }
+    footer {
+      background-color: #007bff;
+      padding: 10px 0;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+    footer a {
+      display: inline-block;
+      margin: 0 25px;
+    }
+    footer img {
+      width: 35px;
+      cursor: pointer;
+    }
+
+@font-face {
+  font-family: 'Bangers';
+  font-style: normal;
+  font-weight: 650;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/bangers/v24/FeVQS0BTqb0h60ACH55Q2A.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Estilos específicos para imagens */
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* Estilos para o botão de reprodução */
+
+
+/* Definição da animação de pulso */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+}
+
+/* Outros estilos gerais */
+body {
+  background-color: #1a1c38; /* Cor de fundo do corpo */
+  color: #fff; /* Cor padrão para o texto */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Bangers, sans-serif; /* Fonte do botão */
+  margin: 0; /* Remover margens padrão */
+  padding: 0; /* Remover preenchimento padrão */
+}
+
+/* Estilos específicos podem ser adicionados aqui, se necessário */
+
+/* CSS PARA FASE1 */
