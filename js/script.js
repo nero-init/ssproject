@@ -251,7 +251,7 @@ verificar.addEventListener('click', function() {
         input.classList.remove('green');
         
         // Converte o valor do input para maiúsculas
-        var value = input.value.toUpperCase();
+        let value = input.value.trim().toUpperCase();
         
         // Verifica se o valor é 'MOPP', 'FRENTISTA' ou 'ORATORIA'
         if(value === 'MOPP' || value === 'FRENTISTA' || value === 'ORATORIA' || value === 'ORATÓRIA') {
