@@ -49,17 +49,44 @@ body{
 }
 
 .start_btn button{
-    font-size: 20px;
-    font-weight: 500;
-    color: #007bff;
-    padding: 15px 30px;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    background: #fff;
-    cursor: pointer;
+    font-family: Bangers, sans-serif;
+    display: inline-block;
+    font-size: 25px;
+    padding: 20px 15px;
+    box-shadow: -1px 5px 1px #5e687980;
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+    animation: pulse 3s infinite; /* Aplicando a animação de pulso */
 }
+/* Definição da animação de pulso */
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0.85;
+    }
+  }
+  
 
+@font-face {
+    font-family: 'Bangers';
+    font-style: normal;
+    font-weight: 650;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/bangers/v24/FeVQS0BTqb0h60ACH55Q2A.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+  
 .info_box{
     width: 320px;
     box-sizing: border-box;
@@ -224,7 +251,7 @@ body{
 }
 
 .quiz_box header .title{
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 450;
 }
 
@@ -461,7 +488,20 @@ footer button.show{
     background: #007bff;
 }
 
+.buttons button.nextlevel2{
+    display: none;
+    color: #fff;
+    background: #06d656;
+}
+
+
 .buttons button.nextlevel{
+    color: #fff;
+    background: #06d656;
+}
+
+
+.buttons button.nextlevel:hover{
     color: #fff;
     background: #06d656;
 }
@@ -479,3 +519,42 @@ footer button.show{
     color: #fff;
     background: #007bff;
 }
+
+.buttons button.verificar{
+    color: #fff;
+    background: #007bff;
+}
+
+.green {
+    color: #155724;
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+.red {
+    color: #721c24;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+
+footer1 {
+    background-color: #007bff; /* Define a cor de fundo do elemento footer como azul. */
+    padding: 8px 0; /* Adiciona um preenchimento de 8px na parte superior e inferior do elemento footer. */
+    text-align: center; /* Centraliza o texto dentro do elemento footer. */
+    position: fixed; /* Fixa a posição do elemento footer, fazendo com que ele permaneça no mesmo lugar mesmo quando a página é rolada. */
+    width: 100%; /* Define a largura do elemento footer para ocupar 100% da largura do seu elemento pai. */
+    bottom: 0; /* Posiciona o elemento footer na parte inferior da janela do navegador. */
+  }
+  
+  footer1 a {
+    display: inline-block; /* Faz com que o elemento de link (a) se comporte como um elemento em bloco, mas permite que outros elementos sejam exibidos ao lado dele na mesma linha. */
+    margin: 0 35px; /* Adiciona uma margem de 80px à esquerda e à direita do elemento de link (a). */
+  }
+  
+  footer1 a img {
+    width: 40px; /* Define a largura da imagem dentro do elemento footer como 40px. */
+    height: auto; /* Mantém a proporção da imagem ajustando automaticamente a altura. */
+    object-fit: contain; /* A imagem será redimensionada para caber dentro do contêiner enquanto mantém a proporção. */
+    cursor: pointer; /* Muda o cursor para um ponteiro quando o usuário passa o mouse sobre a imagem dentro do elemento footer. */
+  }

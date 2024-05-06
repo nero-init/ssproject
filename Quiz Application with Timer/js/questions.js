@@ -13,24 +13,24 @@ let questions = [
   },
     {
     numb: 2,
-    question: "Para quem se destina os serviços do SEST SENAT?",
-    answer: "Comunidade e Transporte",
+    question: "Para quem se destina os Serviços do SEST SENAT?",
+    answer: "Para Todos",
     options: [
-      "Comunidade e Transporte",
-      "Apenas Comunidade",
-      "Apenas Transporte",
-      "Nenhum"
+      "Para Todos",
+      "Apenas Vilelenses",
+      "Apenas Transportadores",
+      "Ninguém"
     ]
   },
     {
     numb: 3,
-    question: "Quantas unidades do SEST SENAT tem em Alagoas?",
-    answer: "3.",
+    question: "O SEST SENAT tem 3 unidades em Alagoas. Onde estão?",
+    answer: "Arapiraca, Teotônio Vilela e Maceió.",
     options: [
-      "2.",
-      "3.",
-      "1.",
-      "5."
+      "Maceió, Teotônio Vilela e Delmiro Gouveia.",
+      "Teotônio Vilela, Murici e Arapiraca.",
+      "Arapiraca, Teotônio Vilela e Maceió.",
+      "Murici, Maceió e Teotônio Vilela."
     ]
   },
   //   {

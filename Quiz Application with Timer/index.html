@@ -12,7 +12,7 @@
 <body>
     <!-- start Quiz button -->
     <img src="assets/sestgif.gif" alt="SEST SENAT Logo">
-    <div class="start_btn"><button>Iniciar Quiz</button></div>
+    <div class="start_btn"><button>Iniciar Game!</button></div>
 
     <!-- Info Box -->
     <div class="info_box">
@@ -30,16 +30,17 @@
     </div>
 
     <div class="evidencia_box">
-        <div class="info-title"><span>Evidência | SENAT</span></div>
+        <div class="info-title"><span>Cursos em Evidência | SENAT</span></div>
         <div class="info-list">
-            <div class="info">O SENAT tem <span>3 evidências</span> nesse mês. Quais são?</div>
-            <div class="input"><input type="text" placeholder="Digite aqui a primeira evidência."></div>
-            <div class="input"><input type="text" placeholder="Digite aqui a segunda evidência."></div>
-            <div class="input"><input type="text" placeholder="Digite aqui a terceira evidência."></div>
+            <div class="info">O SENAT tem <span>3 cursos em evidência</span> nesse mês. Quais são?</div>
+            <div class="input"><input type="text" placeholder="Digite aqui."></div>
+            <div class="input"><input type="text" placeholder="Digite aqui."></div>
+            <div class="input"><input type="text" placeholder="Digite aqui."></div>
         </div>
         <div class="buttons">
             <button class="quit">Sair</button>
-            <button class="restart" onclick="verificarEvidencias()">Verificar</button>
+            <button class="verificar">Verificar</button>
+            <button class="nextlevel2">Próximo</button>
         </div>
     </div>
     
@@ -87,6 +88,18 @@
             <button class="nextlevel">Próximo Game</button>
         </div>
     </div>
+
+    <footer1>
+        <a href="https://www.sestsenat.org.br/noticia/sest-senat-lana-aplicativo"><img src="assets/home.png" alt="home"></a>
+        <a href="#" onclick="mostrarMensagem()"><img src="assets/info.png" alt="info"></a>
+      </footer1>
+    
+      <!-- Scripts adicionais, se necessário, podem ser incluídos aqui -->
+      <script>
+        function mostrarMensagem() {
+          alert("Seja bem vindo ao Game do SEST SENAT, siga as orientações de cada nível, divirta-se!");
+        }
+      </script>
 
     <!-- Inside this JavaScript file I've inserted Questions and Options only -->
     <script src="js/questions.js"></script>

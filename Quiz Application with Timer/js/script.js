@@ -1,4 +1,4 @@
-//selecting all required elements
+//Selecionando os elementos necessarios para o funcionamento
 const start_btn = document.querySelector(".start_btn button");
 const info_box = document.querySelector(".info_box");
 const exit_btn = info_box.querySelector(".buttons .quit");
@@ -9,20 +9,23 @@ const option_list = document.querySelector(".option_list");
 const time_line = document.querySelector("header .time_line");
 const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
-const nextlevel_btn = document.querySelector(".buttons .nextlevel")
+const nextlevel_btn = document.querySelector(".buttons .nextlevel");
 const next_box = document.querySelector(".evidencia_box");
+const verificar = document.querySelector(".buttons .verificar");
 
-// if startQuiz button clicked
+
+// Se o botão iniciar quiz foi ativado, entao:
 start_btn.onclick = ()=>{
   info_box.classList.add("activeInfo"); //show info box
 }
 
-// if exitQuiz button clicked
+// se o botão sair for ativad, entao (volta para a home)
 exit_btn.onclick = ()=>{
     info_box.classList.remove("activeInfo"); //hide info box
+    //next_box.classList.add("ativeEvidencia"); //BOX DO GAME EVIDENCIAS
 }
 
-// if continueQuiz button clicked
+// se o botao continueQuiz
 continue_btn.onclick = ()=>{
     info_box.classList.remove("activeInfo"); //hide info box
     quiz_box.classList.add("activeQuiz"); //show quiz box
@@ -42,13 +45,23 @@ let widthValue = 0;
 
 const restart_quiz = result_box.querySelector(".buttons .restart");
 const quit_quiz = result_box.querySelector(".buttons .quit");
-const nextlevel_btnn = result_box.querySelector(".buttons .nextlevel")
+const nextlevel_btnn = result_box.querySelector(".buttons .nextlevel");
 
+
+const quit_evidencia = next_box.querySelector(".buttons .quit");
+
+quit_evidencia.onclick = ()=>{
+    window.location.reload(); //reload the current window
+}
+
+
+
+//PROXIMO NIVEL
 nextlevel_btnn.onclick = ()=>{
     info_box.classList.remove("activeInfo"); //hide info box
     quiz_box.classList.remove("activeQuiz"); //hide quiz box
     result_box.classList.remove("activeResult"); //show result box
-    next_box.classList.add("ativeEvidencia"); //show result box
+    next_box.classList.add("ativeEvidencia"); //BOX DO GAME EVIDENCIAS
 }
 
 // if restartQuiz button clicked
@@ -222,4 +235,39 @@ function queCounter(index){
     bottom_ques_counter.innerHTML = totalQueCounTag;  //adding new span tag inside bottom_ques_counter
 }
 
+
+
+
+verificar.addEventListener('click', function() {
+    // Seleciona todos os inputs
+    var inputs = document.querySelectorAll('.input input');
+    
+    // Seleciona o botão 'Próximo'
+    var next_btn = document.querySelector('.buttons button.nextlevel2');
+    
+    // Itera sobre cada input
+    inputs.forEach(function(input) {
+        // Remove a classe 'green' do input
+        input.classList.remove('green');
+        
+        // Converte o valor do input para maiúsculas
+        var value = input.value.toUpperCase();
+        
+        // Verifica se o valor é 'MOPP', 'FRENTISTA' ou 'ORATORIA'
+        if(value === 'MOPP' || value === 'FRENTISTA' || value === 'ORATORIA' || value === 'ORATÓRIA') {
+            // Adiciona a classe 'green' ao input
+            input.classList.remove('red'); 
+            input.classList.add('green'); 
+            // Adiciona a classe 'correct' e o ícone de verificação ao input
+            input.disabled = true; // Desativa a entrada do usuário
+        } else {
+            // Adiciona a classe 'incorrect' e o ícone de cruz ao input
+            input.classList.add('red');
+            input.disabled = false; // Desativa a entrada do usuário
+        }
+    });
+    
+    // Mostra o botão 'Próximo'
+    //next_btn.style.display = 'block';
+});
 
