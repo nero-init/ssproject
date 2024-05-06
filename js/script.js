@@ -250,8 +250,8 @@ verificar.addEventListener('click', function() {
         // Remove a classe 'green' do input
         input.classList.remove('green');
         
-        // Converte o valor do input para maiúsculas
-        let value = input.value.trim().toUpperCase();
+        // Divide o valor do input em palavras, remove os espaços em branco de cada palavra e junta as palavras novamente
+        let value = input.value.split(' ').map(word => word.trim()).join(' ').toUpperCase();
         
         // Verifica se o valor é 'MOPP', 'FRENTISTA' ou 'ORATORIA'
         if(value === 'MOPP' || value === 'FRENTISTA' || value === 'ORATORIA' || value === 'ORATÓRIA') {
@@ -270,4 +270,5 @@ verificar.addEventListener('click', function() {
     // Mostra o botão 'Próximo'
     //next_btn.style.display = 'block';
 });
+
 
